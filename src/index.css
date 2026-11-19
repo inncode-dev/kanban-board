@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+/* Tailwind v4 uses the OS preference for `dark:` by default.
+   This line switches it to a `.dark` class on <html>, so the user's choice wins. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens (inncode.dev). Each one becomes utilities: bg-paper, text-muted, border-line... */
+@theme {
+  --color-paper: #ededea;
+  --color-surface: #f7f7f5;
+  --color-ink: #111111;
+  --color-muted: #62625e;
+  --color-line: #d2d2cc;
+  --color-accent: #4f6b78;
+  --color-mint: #dcf2d2;
+
+  /* Dark theme counterparts, used with the dark: variant. */
+  --color-night: #141413;
+  --color-night-surface: #1d1d1b;
+  --color-night-line: #36362f;
+  --color-night-muted: #a3a39c;
+
+  --font-display: 'Space Grotesk Variable', sans-serif;
+  --font-sans: 'DM Sans Variable', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
